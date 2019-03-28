@@ -1,0 +1,26 @@
+ja:
+  # hello: こんにちは
+  # foods:
+  #   vegetables:
+  #     cucumber: きゅうり
+  title: 題名
+  memo: メモ
+  author: 著者
+  picture: 画像
+  books: 書籍
+  show: 詳細
+  edit: 編集
+  destroy: 削除
+  new_book: 新規書籍情報
+  back: 戻る
+  create_book: 書籍登録
+  editing_book: 詳細書籍情報
+  are_you_sure: 削除してもいいですか？
+  book_was_successfully_created: 書籍情報が正しく登録されました
+  book_was_successfully_updated: 書籍情報が正しく更新されました
+  book_was_successfully_destroyed: 書籍情報が正しく削除されました
+  helpers:
+    submit:
+      create: "登録する"
+      update: "更新する"
+      submit: "保存する"
