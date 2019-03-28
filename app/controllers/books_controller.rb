@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
 
@@ -28,7 +30,7 @@ class BooksController < ApplicationController
 
     respond_to do |format|
       if @book.save
-        format.html { redirect_to @book, notice: t('book_was_successfully_created') }
+        format.html { redirect_to @book, notice: t(".book_was_successfully_created") }
         format.json { render :show, status: :created, location: @book }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class BooksController < ApplicationController
   def update
     respond_to do |format|
       if @book.update(book_params)
-        format.html { redirect_to @book, notice: t('book_was_successfully_updated') }
+        format.html { redirect_to @book, notice: t(".book_was_successfully_updated") }
         format.json { render :show, status: :ok, location: @book }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     respond_to do |format|
-      format.html { redirect_to books_url, notice: t('book_was_successfully_destroyed.') }
+      format.html { redirect_to books_url, notice: t(".book_was_successfully_destroyed.") }
       format.json { head :no_content }
     end
   end
@@ -69,8 +71,6 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      p "**********" # 見つけ易くするための目印。何でも良い。
-      p params # paramsの中身を表示
       params.require(:book).permit(:title, :memo, :author, :picture)
     end
 end
